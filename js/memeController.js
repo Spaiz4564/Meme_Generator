@@ -119,6 +119,8 @@ function onSwitchLine() {
   if (meme.lineFocus) meme.lineIdx++
   if (meme.lineIdx >= meme.lines.length) meme.lineIdx = 0
   document.querySelector('.focus').style.display = 'block'
+  document.querySelector('.focus').style.height =
+    meme.lines[meme.lineIdx].size + 'px'
   document.querySelector('.focus').style.top =
     meme.lines[meme.lineIdx].height + 'px'
   meme.lineFocus = true

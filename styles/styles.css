@@ -24,6 +24,7 @@ canvas {
 }
 
 .canvas-container {
+  overflow: hidden;
   position: relative;
 }
 
@@ -54,7 +55,6 @@ li {
 
 .editor {
   gap: 100px;
-  /* padding: 20px 50px 20px 200px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +63,6 @@ li {
 
 .editor-container {
   background-color: #703a5954;
-  /* display: none; */
 }
 
 .tools {
@@ -89,7 +88,6 @@ li {
   justify-content: center;
   flex-wrap: wrap;
   width: 79%;
-  /* background-color: #cc9cb691; */
   background-color: #e2dcdf;
   padding: 10px;
   border-radius: 10px;
