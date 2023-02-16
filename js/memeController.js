@@ -36,7 +36,7 @@ function onAlignRight() {
   render(meme, 'right')
 }
 
-function render(meme, dir = 'center') {
+function render(meme, dir) {
   gCtx.strokeStyle = 'black'
   gCtx.save()
   gImgFrame = new Image()
