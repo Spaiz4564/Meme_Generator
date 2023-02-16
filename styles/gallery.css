@@ -15,7 +15,22 @@
 }
 
 .tips p {
+  font-size: 1.3rem;
   cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+.modal {
+  opacity: 0;
+  z-index: -1;
+  transition: 1s all;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  translate: 47% -79%;
 }
 
 .search-input::placeholder {

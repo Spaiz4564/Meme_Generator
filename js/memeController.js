@@ -132,6 +132,7 @@ function onDeleteTxt() {
 }
 
 function onRenderSavedMemes() {
+  onCloseModal()
   const savedMemesContainerEl = document.querySelector('.saved-memes-container')
   savedMemesContainerEl.classList.remove('hidden')
   const savedMemesEl = document.querySelector('.saved-memes')

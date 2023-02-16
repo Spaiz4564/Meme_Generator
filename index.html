@@ -12,7 +12,15 @@
   </head>
   <body onload="onInit()">
     <header>
-      <img class="logo" src="images/logo.png" alt="" />
+      <img onclick="onCloseModal()" class="logo" src="images/logo.png" alt="" />
+      <div onclick="onOpenModal()" class="hamburger"><img src="images/hamburger.png" alt=""></div>
+      <div class="modal">
+        <ul>
+          <li onclick="renderGallery()">Gallery</li>
+          <li onclick="onRenderSavedMemes()">  Memes</li>
+          <li>About</li>
+        </ul>
+      </div>
       <div class="nav">
         <ul>
           <li onclick="renderGallery()">Gallery</li>
