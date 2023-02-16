@@ -23,25 +23,20 @@ function onHideFocus() {
 
 function onAlignLeft() {
   const meme = getMeme()
-  // meme.lines.forEach(line => (line.width = 20))
-  gCtx.textAlign = 'left'
-  renderMeme(meme)
+  render(meme, 'left')
 }
 
 function onAlignCenter() {
   const meme = getMeme()
-  // meme.lines.forEach(line => (line.width = 120))
-  gCtx.textAlign = 'center'
-  renderMeme(meme)
-}
-function onAlignRight() {
-  const meme = getMeme()
-  // meme.lines.forEach(line => (line.width = 250))
-  gCtx.textAlign = 'right'
-  renderMeme(meme)
+  render(meme, 'center')
 }
 
-function render(meme) {
+function onAlignRight() {
+  const meme = getMeme()
+  render(meme, 'right')
+}
+
+function render(meme, dir = 'center') {
   gCtx.strokeStyle = 'black'
   gCtx.save()
   gImgFrame = new Image()
@@ -58,10 +53,12 @@ function render(meme) {
       gCtx.fillText(
         meme.lines[i].txt,
         meme.lines[i].width,
-        meme.lines[i].height
+        meme.lines[i].height,
+        gElCanvas.width
       )
     })
   })
+  gCtx.textAlign = dir
 }
 
 function renderMeme(meme) {
@@ -77,7 +74,7 @@ function onChangeFont(val) {
 function onAddText() {
   if (!gMeme.isSecondLineAdded) {
     addText(500)
-    gCtx.fillText(gMeme.lines[1].txt, gMeme.lines[1].width, 500)
+    gCtx.fillText('i love dank memes', gElCanvas.width / 2, 500)
   } else {
     addText(gElCanvas.height / 2)
     gCtx.fillText(
@@ -131,6 +128,7 @@ function onDeleteTxt() {
   const meme = getMeme()
   meme.lines.splice(meme.lineIdx, 1)
   renderMeme(meme)
+  document.querySelector('.txt-input').value = ''
 }
 
 function onRenderSavedMemes() {

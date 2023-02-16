@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+  .tips {
+    gap: 28px;
+    color: white;
+    width: auto;
+    font-size: 17px;
+    padding: 12px 20px;
+  }
+
+  .search-input {
+    font-size: 17px;
+    width: auto;
+  }
+
+  .search {
+    gap: 2%;
+  }
+
+  li {
+    font-size: 24px;
+  }
+
+  .emojis li {
+    font-size: 17px;
+  }
+
+  .gallery-img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+
+  .saved-memes {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+
+  canvas {
+    width: 350px;
+  }
+
+  .icons {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .txt-input {
+    width: 200px;
+    height: 37px;
+    font-size: 17px;
+    margin-top: 7px;
+  }
+
+  .features-2,
+  .features-3 {
+    width: 72%;
+  }
+
+  .features-2 {
+    gap: 6px;
+  }
+
+  .tools {
+    width: 350px;
+    gap: 18px;
+    height: 350px;
+    padding: 0;
+  }
+
+  .select-font {
+    font-size: 15px;
+    height: 30px;
+  }
+
+  .btn_wrap {
+    width: 143px;
+    height: 30px;
+  }
+
+  .btn_wrap span {
+    font-size: 14px;
+  }
+
+  .editor {
+    gap: 30px;
+  }
+  .container i {
+    font-size: 15px;
+  }
+}

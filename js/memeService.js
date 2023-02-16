@@ -70,12 +70,11 @@ var gMeme = {
 }
 
 function addText(height) {
-  console.log(height)
   const txt = {
     isUpperCased: false,
     txt: 'i love dank memes',
     height: height,
-    width: 120,
+    width: gElCanvas.width / 2,
     size: 22,
     font: 'impact',
     color: 'white',
@@ -100,6 +99,7 @@ function getGallery() {
 
 function setLineTxt() {
   var txtVal = document.querySelector('.txt-input').value
+  if (!gMeme.lines[gMeme.lineIdx]) return
   gMeme.lines[gMeme.lineIdx].txt = txtVal
   renderMeme(gMeme)
 }
