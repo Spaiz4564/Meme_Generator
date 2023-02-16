@@ -99,7 +99,11 @@
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 380px) {
+=======
+@media (max-width: 320px) {
+>>>>>>> a040dff4764f728cfae57b9a8b26e9405558a39b
   .gallery-img {
     height: 120px;
     width: 120px;
