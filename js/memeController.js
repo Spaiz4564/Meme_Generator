@@ -23,18 +23,21 @@ function onHideFocus() {
 
 function onAlignLeft() {
   const meme = getMeme()
-  meme.lines.forEach(line => (line.width = 20))
+  // meme.lines.forEach(line => (line.width = 20))
+  gCtx.textAlign = 'left'
   renderMeme(meme)
 }
 
 function onAlignCenter() {
   const meme = getMeme()
-  meme.lines.forEach(line => (line.width = 120))
+  // meme.lines.forEach(line => (line.width = 120))
+  gCtx.textAlign = 'center'
   renderMeme(meme)
 }
 function onAlignRight() {
   const meme = getMeme()
-  meme.lines.forEach(line => (line.width = 250))
+  // meme.lines.forEach(line => (line.width = 250))
+  gCtx.textAlign = 'right'
   renderMeme(meme)
 }
 
