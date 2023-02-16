@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/gallery.css" />
+    <link rel="stylesheet" href="styles/shareBtn.css" />
+    <title>Meme generator</title>
+  </head>
+  <body onload="onInit()">
+    <header>
+      <img class="logo" src="images/logo.png" alt="" />
+      <div class="nav">
+        <ul>
+          <li onclick="renderGallery()">Gallery</li>
+          <li onclick="onRenderSavedMemes()">  Memes</li>
+          <li>About</li>
+        </ul>
+      </div>
+    </header>
+    <section class="saved-memes-container hidden">
+      <div class="saved-memes">
+
+      </div>
+    </section>
+    <section class="gallery-container">
+        <div class="search">
+          <input class="search-input" oninput="onSetFilter(this.value)" list="browsers" placeholder="Search template">
+          <datalist id="browsers">
+            <option value="funny">
+            <option value="baby">
+            <option value="men">
+            <option value="smile">
+            <option value="movies">
+            <option value="pet">
+          </datalist>
+
+
+
+          <div class="tips">
+            <p>Funny</p>
+            <p>Animal</p>
+            <p>Men</p>
+            <p>Movies</p>
+            <p>Baby</p>
+            <p>Smile</p>
+          </div>
+          
+          
+        </div>
+      <div class="gallery"></div>
+    </section>
+    <section class="editor-container" >
+      <div class="editor">
+        <div class="canvas-container">
+          <div class="focus"></div>
+          <canvas onclick="onHideFocus()"
+          id="my-canvas"
+          width="550"
+          height="550"
+          style="outline: 1px solid rgb(0, 0, 0)"
+        ></canvas></div>
+        
+        <div class="tools">
+          <input oninput="setLineTxt()" class="txt-input" type="text" name="txt" id="txt"
+          placeholder="type something.."</input>
+          <div class="features-1">
+            <div onclick="onSwitchLine()" class="arrows-div"><img class="icons" src="images/arrows.png" alt=""></div>
+            <div class="plus-div"><img onclick="onAddText()" class="icons" src="images/plus.png" alt=""></div>
+            <img onclick="onDeleteTxt()" class="icons" src="images/trash.png" alt="">
+          </div>
+          <div class="features-2">
+            <div onclick="onIncreaseTxtSize()" class="icon-container"><img class="icons" src="images/sizeUp.jpg" alt=""></div>
+            <div onclick="onLowerTxtSize()" class="icon-container"><img class="icons" src="images/sizeDown.png" alt=""></div>
+            <div onclick="onAlignLeft()" class="icon-container"><img class="icons" src="images/alignLeft.png" alt=""></div>
+            <div onclick="onAlignCenter()" class="icon-container"><img class="icons" src="images/alignCenter.png" alt=""></div>
+            <div onclick="onAlignRight()" class="icon-container"><img class="icons" src="images/alignRight.png" alt=""></div>
+            <select name="selectFont" class="select-font" onchange="onChangeFont(this.value)">
+              <option value="impact">impact</option>
+              <option value="palatino">palatino</option>
+              <option value="monospace">monospace</option>
+              <option value="georgia">georgia</option>
+            </select>
+            <div onclick="onUpperCase()" class="icon-container"><img class="icons" src="images/cap.png" alt=""></div>
+            <input type="color" oninput="changeColor(this.value) " />
+          </div>
+          <div class="features-3">
+           <ul class="emojis">
+            <li>😂</li>
+            <li>😋</li>
+            <li>🥱</li>
+            <li>😎</li>
+           </ul>
+          </div>
+          <div class="btn_wrap">
+            <span>Share</span>
+            <div class="container">
+                <i  onclick="onUploadImg()" class="fab fa-facebook-f"></i>
+                <i class="fa-solid fa-download"><a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">h</a></i>
+                <i onclick="onSaveMeme()" class="fa-regular fa-bookmark"></i> 
+                <i class="fab fa-github"></i>
+            </div>
+        </div>
+    <a href="https://dribbble.com/YancyMin" class="dr-url" target="_blank"><img class="dr" alt=""></a>
+        </div>
+       
+      </div>
+    </section>
+    <section class="footer-container">
+      <div class="filler">
+        <img src="images/logo.png" alt="">
+        <p>All rights reserved 2023</p>
+      </div>
+    </section>
+    <script src="https://kit.fontawesome.com/096b5eafcd.js" crossorigin="anonymous"></script>
+    <script src="js/util.js"></script>
+    <script src="js/galleryController.js"></script>
+    <script src="js/memeController.js"></script>
+    <script src="js/memeService.js"></script>
+  </body>
+</html>

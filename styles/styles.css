@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+header {
+  padding: 0 165px 0 20px;
+  background-color: rgb(52, 49, 52);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+canvas {
+  border-radius: 17px;
+  box-shadow: rgb(0 0 0 / 40%) 0px 54px 55px, rgb(0 0 0 / 47%) 0px -12px 30px,
+    rgb(0 0 0 / 54%) 0px 4px 6px, rgb(0 0 0 / 43%) 0px 12px 13px,
+    rgb(0 0 0 / 32%) 0px -3px 5px;
+}
+
+.canvas-container {
+  position: relative;
+}
+
+.logo {
+  padding: 15px;
+  width: 200px;
+}
+
+ul {
+  list-style: none;
+  gap: 30px;
+  display: flex;
+}
+
+li {
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+}
+
+.txt-input {
+  border-radius: 100px;
+  width: 400px;
+  font-size: 31px;
+  height: 51px;
+  text-align: center;
+}
+
+.editor {
+  gap: 100px;
+  /* padding: 20px 50px 20px 200px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.editor-container {
+  background-color: #703a5954;
+  /* display: none; */
+}
+
+.tools {
+  border-radius: 17px;
+  gap: 30px;
+  padding: 25px;
+  height: 550px;
+  width: 550px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #343134e8;
+}
+
+.features-1 {
+  display: flex;
+  gap: 20px;
+}
+
+.features-2,
+.features-3,
+.features-4 {
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 77%;
+  /* background-color: #cc9cb691; */
+  background-color: #e2dcdf;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.features-3 {
+  border-radius: 40px;
+}
+
+.emojis {
+  display: flex;
+}
+
+.features-4 button {
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.arrows-div,
+.plus-div,
+.trash-div {
+  border-radius: 10px;
+  padding: 1px;
+}
+
+.focus {
+  display: none;
+  padding: 5px;
+  top: 15px;
+  left: 1px;
+  position: absolute;
+  width: 540px;
+  height: 35px;
+  background-color: white;
+  opacity: 0.3;
+}
+
+.arrows-div {
+  background-color: #41b1ce;
+}
+
+.container a {
+  left: 1px;
+  position: absolute;
+  opacity: 0;
+}
+
+.plus-div {
+  background-color: #468c00;
+}
+
+.trash-div {
+  background-color: #a41916;
+}
+
+.icons {
+  cursor: pointer;
+  height: 50px;
+  width: 55px;
+}
+
+.icon-container {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+  padding: 0 1px 0 1px;
+  background-color: white;
+}
+
+.select-font {
+  width: 57%;
+  height: 54px;
+  font-size: 20px;
+}
+
+.filler {
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background-color: rgb(52, 49, 52);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filler p {
+  font-family: system-ui;
+
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.saved-memes-container {
+  background-color: #383b44;
+  height: 100vh;
+}
