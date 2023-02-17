@@ -17,13 +17,14 @@ header {
 }
 
 canvas {
-  border-radius: 17px;
+  border-radius: 15px;
   box-shadow: rgb(0 0 0 / 40%) 0px 54px 55px, rgb(0 0 0 / 47%) 0px -12px 30px,
     rgb(0 0 0 / 54%) 0px 4px 6px, rgb(0 0 0 / 43%) 0px 12px 13px,
     rgb(0 0 0 / 32%) 0px -3px 5px;
 }
 
 .canvas-container {
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
 }
