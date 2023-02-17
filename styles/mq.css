@@ -99,7 +99,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   .gallery-img {
     height: 120px;
     width: 120px;
