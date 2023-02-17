@@ -162,6 +162,7 @@ function onSaveMeme() {
 }
 
 function onSetFilter(val) {
+  console.log(val)
   gFilterBy.txt = val
   renderGallery()
 }

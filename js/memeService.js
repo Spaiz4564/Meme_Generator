@@ -93,7 +93,9 @@ function getMeme() {
 function getGallery() {
   if (!gFilterBy.txt) return gImgs
   else {
-    return gImgs.filter(img => img.keywords.includes(gFilterBy.txt))
+    return gImgs.filter(img =>
+      img.keywords.some(word => word.includes(gFilterBy.txt))
+    )
   }
 }
 
