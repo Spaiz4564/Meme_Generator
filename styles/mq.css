@@ -101,8 +101,8 @@
 
 @media (max-width: 548px) {
   .gallery-img {
-    height: 200px;
-    width: 200px;
+    height: 135px;
+    width: 135px;
   }
 
   .tips {
@@ -115,7 +115,7 @@
 
   .gallery,
   .saved-memes {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
   }
 
   .hamburger img {
@@ -174,7 +174,7 @@
     margin-top: 11px;
   }
   header {
-    gap: 100px;
+    gap: 120px;
     justify-content: flex-start;
     padding: 0;
   }
