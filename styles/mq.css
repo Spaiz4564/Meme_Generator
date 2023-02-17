@@ -174,8 +174,8 @@
     margin-top: 11px;
   }
   header {
-    gap: 20px;
-    justify-content: flex-start;
+    /* gap: 20px; */
+    justify-content: space-between;
     padding: 0;
   }
 
