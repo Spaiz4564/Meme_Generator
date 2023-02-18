@@ -7,6 +7,12 @@
     padding: 12px 20px;
   }
 
+  .features-2 i,
+  .features-1 i,
+  .color-container i {
+    font-size: 25px;
+  }
+
   .tips option {
     font-size: 0.8rem;
   }
@@ -56,8 +62,8 @@
 
   .txt-input {
     width: 200px;
-    height: 37px;
-    font-size: 17px;
+    height: 30px;
+    font-size: 15px;
     margin-top: 7px;
   }
 
@@ -67,12 +73,16 @@
   }
 
   .features-2 {
-    gap: 6px;
+    gap: 10px;
+  }
+
+  .paint {
+    top: 0;
   }
 
   .tools {
     width: 350px;
-    gap: 20px;
+    gap: 23px;
     height: 350px;
     padding: 0;
   }
@@ -89,6 +99,10 @@
 
   .btn_wrap span {
     font-size: 14px;
+  }
+
+  .features-1 {
+    gap: 18px;
   }
 
   .editor {
@@ -174,7 +188,7 @@
     margin-top: 11px;
   }
   header {
-    gap: 120px;
+    gap: 140px;
     justify-content: flex-start;
     padding: 0;
   }
