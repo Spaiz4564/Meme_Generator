@@ -8,11 +8,35 @@
     width: 300px;
     height: 300px;
   }
+
+  .tips option {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tips {
+    gap: 20px;
+  }
+
+  .tips option {
+    font-size: 0.8rem;
+  }
+
+  .gallery,
+  .saved-memes {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .gallery-img {
+    height: 280px;
+    width: 280px;
+  }
 }
 
 @media (max-width: 768px) {
   .tips {
-    gap: 28px;
+    gap: 14px;
     color: white;
     width: auto;
     font-size: 17px;
@@ -51,16 +75,16 @@
   }
 
   .gallery-img {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
   }
 
   .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
 
   .saved-memes {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
 
   canvas {
