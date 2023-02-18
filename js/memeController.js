@@ -108,6 +108,7 @@ function onIncreaseTxtSize() {
   meme.lines[meme.lineIdx].size += 4
   renderMeme(meme)
 }
+
 function onLowerTxtSize() {
   const meme = getMeme()
   meme.lines[meme.lineIdx].size -= 4
@@ -159,6 +160,17 @@ function onSaveMeme() {
   const newMeme = { ...gMeme }
   gSavedMemes.push(newMeme)
   saveToStorage(STORAGE_KEY, gSavedMemes)
+  handlePopUp('Meme saved')
+}
+
+function handlePopUp(txt) {
+  const popUpEl = document.querySelector('.pop-up')
+  const popUpSpanEl = document.querySelector('.pop-up span')
+  popUpSpanEl.innerText = txt
+  popUpEl.style.opacity = '1'
+  setTimeout(() => {
+    popUpEl.style.opacity = '0'
+  }, 1500)
 }
 
 function onSetFilter(val) {

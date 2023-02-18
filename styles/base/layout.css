@@ -1,0 +1,55 @@
+.hamburger {
+  display: none;
+}
+
+.editor {
+  gap: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.logo {
+  cursor: pointer;
+  padding: 15px;
+  width: 200px;
+}
+
+.editor-container {
+  background-color: #703a5954;
+}
+
+.tools {
+  border-radius: 17px;
+  gap: 30px;
+  padding: 25px;
+  height: 550px;
+  width: 550px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #343134e8;
+}
+
+.canvas-container {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.filler {
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background-color: rgb(52, 49, 52);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filler p {
+  font-family: system-ui;
+
+  color: white;
+}

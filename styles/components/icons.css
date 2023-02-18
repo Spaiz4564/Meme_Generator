@@ -1,0 +1,36 @@
+.emojis {
+  display: flex;
+}
+
+.icons {
+  cursor: pointer;
+  height: 50px;
+  width: 55px;
+}
+
+.arrows {
+  rotate: 90deg;
+}
+
+.icon-container {
+  padding: 0 1px 0 1px;
+}
+
+.color-container input {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.paint {
+  top: -7px;
+  position: absolute;
+}
+
+.color-container i {
+  cursor: pointer;
+  font-size: 42px;
+}
+
+.color-container {
+  position: relative;
+}

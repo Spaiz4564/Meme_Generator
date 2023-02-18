@@ -1,0 +1,11 @@
+.focus {
+  display: none;
+  padding: 5px;
+  top: 15px;
+  left: 1px;
+  position: absolute;
+  width: 540px;
+  height: 35px;
+  background-color: white;
+  opacity: 0.3;
+}

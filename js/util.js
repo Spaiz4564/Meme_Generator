@@ -58,7 +58,7 @@ function renderImg(img) {
 }
 
 function downloadImg(elLink) {
-  console.log('hello')
+  handlePopUp('Downloading meme')
   const imgContent = gElCanvas.toDataURL('image/jpeg')
   elLink.href = imgContent
 }

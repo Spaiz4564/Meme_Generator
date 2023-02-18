@@ -1,0 +1,35 @@
+.search-input::placeholder {
+  padding-left: 30px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 9rem;
+  padding-top: 30px;
+  padding-left: 2rem;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 100px;
+  width: 53%;
+  font-size: 25px;
+}
+
+.txt-input {
+  border: 1px solid #c3257a;
+  border-radius: 100px;
+  width: 400px;
+  font-size: 27px;
+  height: 51px;
+  text-align: center;
+}
+
+.select-font {
+  border-radius: 7px;
+  width: 57%;
+  height: 50px;
+  font-size: 20px;
+}

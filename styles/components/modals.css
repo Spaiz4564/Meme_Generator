@@ -1,0 +1,31 @@
+.pop-up {
+  justify-content: center;
+  transition: all 1s;
+  opacity: 0;
+  color: white;
+  border: 1px solid #d0bec8;
+  padding: 10px;
+  border-radius: 12px;
+  align-items: center;
+  display: flex;
+  background-color: rgb(52, 49, 52);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 90px;
+  width: 168px;
+}
+
+.modal {
+  opacity: 0;
+  z-index: -1;
+  transition: 1s all;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  translate: 47% -79%;
+}
+
+.pop-up span {
+  font-family: Roboto;
+}

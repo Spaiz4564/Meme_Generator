@@ -1,0 +1,17 @@
+.tips {
+  justify-content: center;
+  padding: 12px;
+  border-radius: 100px;
+  background-color: #88898b;
+  display: flex;
+  gap: 32px;
+  color: white;
+  width: 43%;
+  font-size: 25px;
+}
+
+.tips option {
+  font-family: cursive;
+  font-size: 1.3rem;
+  cursor: pointer;
+}

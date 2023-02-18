@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+header {
+  padding: 0 165px 0 20px;
+  background-color: rgb(52, 49, 52);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+canvas {
+  border-radius: 15px;
+  box-shadow: rgb(0 0 0 / 40%) 0px 54px 55px, rgb(0 0 0 / 47%) 0px -12px 30px,
+    rgb(0 0 0 / 54%) 0px 4px 6px, rgb(0 0 0 / 43%) 0px 12px 13px,
+    rgb(0 0 0 / 32%) 0px -3px 5px;
+}
+
+ul {
+  list-style: none;
+  gap: 30px;
+  display: flex;
+}
+
+i {
+  cursor: pointer;
+}
+
+li {
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+}

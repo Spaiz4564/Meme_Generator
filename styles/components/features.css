@@ -1,0 +1,30 @@
+.features-3 {
+  border-radius: 40px;
+}
+
+.features-1 i,
+.features-2 i,
+.features-3 i {
+  font-size: 42px;
+  opacity: 1;
+}
+
+.features-2,
+.features-3,
+.features-4 {
+  border: 1px solid #c3257a;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 79%;
+  background-color: #e2dcdf;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.features-1 {
+  display: flex;
+  gap: 25px;
+}
