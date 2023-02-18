@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/gallery.css" />
     <link rel="stylesheet" href="styles/shareBtn.css" />
@@ -74,24 +77,27 @@
           <input oninput="setLineTxt()" class="txt-input" type="text" name="txt" id="txt"
           placeholder="type something.."</input>
           <div class="features-1">
-            <div onclick="onSwitchLine()" class="arrows-div"><img class="icons" src="images/arrows.png" alt=""></div>
-            <div class="plus-div"><img onclick="onAddText()" class="icons" src="images/plus.png" alt=""></div>
-            <img onclick="onDeleteTxt()" class="icons" src="images/trash.png" alt="">
+            <i onclick="onSwitchLine()" class="fa-solid fa-arrow-right-arrow-left arrows"></i>
+            <i onclick="onAddText()" class="fa-solid fa-plus"></i>
+            <i onclick="onDeleteTxt()" class="fa-solid fa-trash"></i>
           </div>
           <div class="features-2">
-            <div onclick="onIncreaseTxtSize()" class="icon-container"><img class="icons" src="images/sizeUp.jpg" alt=""></div>
-            <div onclick="onLowerTxtSize()" class="icon-container"><img class="icons" src="images/sizeDown.png" alt=""></div>
-            <div onclick="onAlignLeft()" class="icon-container"><img class="icons" src="images/alignLeft.png" alt=""></div>
-            <div onclick="onAlignCenter()" class="icon-container"><img class="icons" src="images/alignCenter.png" alt=""></div>
-            <div onclick="onAlignRight()" class="icon-container"><img class="icons" src="images/alignRight.png" alt=""></div>
+            <img onclick="onIncreaseTxtSize()" class="icons" src="images/increase.png" alt="">
+            <img onclick="onLowerTxtSize()" class="icons" src="images/reduce.png" alt="">
+            <i onclick="onAlignLeft()" class="fa-solid fa-align-left"></i>
+            <i onclick="onAlignCenter()" class="fa-solid fa-align-justify"></i>
+            <i onclick="onAlignRight()" class="fa-solid fa-align-right"></i>
             <select name="selectFont" class="select-font" onchange="onChangeFont(this.value)">
               <option value="impact">impact</option>
               <option value="palatino">palatino</option>
               <option value="monospace">monospace</option>
               <option value="georgia">georgia</option>
             </select>
-            <div onclick="onUpperCase()" class="icon-container"><img class="icons" src="images/cap.png" alt=""></div>
-            <input type="color" oninput="changeColor(this.value) " />
+            <i onclick="onUpperCase()" class="fa-solid fa-a"></i>
+            <div class="color-container">
+              <i class="fa-solid fa-palette paint"></i>
+              <input type="color" oninput="changeColor(this.value)"/>
+            </div>
           </div>
           <div class="features-3">
            <ul class="emojis">

@@ -1,4 +1,4 @@
-i {
+.container i {
   opacity: 0;
   font-size: 28px;
   color: #1f1e1e;
@@ -10,6 +10,7 @@ i {
 }
 
 .btn_wrap {
+  border: 1px solid #c3257a;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

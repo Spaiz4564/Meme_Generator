@@ -80,9 +80,14 @@
 }
 
 .gallery-img {
+  transition: all 0.5s;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   height: 400px;
   width: 400px;
+}
+
+.gallery-img:hover {
+  scale: 1.05;
 }
