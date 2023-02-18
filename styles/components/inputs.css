@@ -4,17 +4,20 @@
 
 .search {
   display: flex;
-  justify-content: space-between;
+  gap: 50px;
   align-items: center;
-  padding-right: 9rem;
   padding-top: 30px;
-  padding-left: 2rem;
+  padding-left: 5rem;
+}
+
+.search i {
+  font-size: 30px;
 }
 
 .search-input {
   padding: 10px;
   border-radius: 100px;
-  width: 53%;
+  width: 45%;
   font-size: 25px;
 }
 

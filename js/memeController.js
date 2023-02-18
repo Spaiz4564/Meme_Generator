@@ -65,6 +65,15 @@ function renderMeme(meme) {
   render(meme)
 }
 
+function onRenderRandomMeme() {
+  document.querySelector('.gallery-container').classList.add('hidden')
+  showEditor()
+  const meme = getMeme()
+  const randomNum = Math.floor(Math.random() * gImgs.length)
+  setImg(randomNum)
+  renderMeme(meme)
+}
+
 function onChangeFont(val) {
   const meme = getMeme()
   meme.lines[meme.lineIdx].font = val
