@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   row-gap: 50px;
-  padding-top: 50px;
+  padding: 50px 80px;
 }
 
 .gallery-img {
@@ -17,8 +17,8 @@
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
-  height: 400px;
-  width: 400px;
+  height: 380px;
+  width: 380px;
 }
 
 .gallery-img:hover {

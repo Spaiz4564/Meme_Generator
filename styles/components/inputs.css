@@ -4,14 +4,19 @@
 
 .search {
   display: flex;
-  gap: 50px;
+  gap: 70px;
   align-items: center;
   padding-top: 30px;
-  padding-left: 5rem;
+  padding-left: 6rem;
 }
 
 .search i {
+  transition: all 0.3s;
   font-size: 30px;
+}
+
+.search i:hover {
+  scale: 1.1;
 }
 
 .search-input {
@@ -25,7 +30,7 @@
   border: 1px solid #c3257a;
   border-radius: 100px;
   width: 400px;
-  font-size: 27px;
+  font-size: 24px;
   height: 51px;
   text-align: center;
 }

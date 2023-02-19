@@ -1,12 +1,12 @@
 'use strict'
 
 var gKeywordSearchCountMap = {
-  funny: 12,
-  pet: 15,
-  baby: 10,
-  men: 14,
-  movies: 13,
-  smile: 10,
+  funny: 13,
+  pet: 16,
+  baby: 11,
+  men: 15,
+  movies: 14,
+  smile: 11,
 }
 var gSavedMemeCounter = 0
 var gImgs = [
@@ -95,6 +95,10 @@ function setImg(id) {
 
 function getMeme() {
   return gMeme
+}
+
+function getKeyWords() {
+  return gKeywordSearchCountMap
 }
 
 function getGallery() {

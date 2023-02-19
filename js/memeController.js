@@ -18,31 +18,18 @@ function onInit() {
   handleTipsSize()
 }
 
-function onHideFocus() {
-  document.querySelector('.focus').style.display = 'none'
-}
-
-function onAlignLeft() {
+function onAlign(dir) {
   const meme = getMeme()
-  render(meme, 'left')
-}
-
-function onAlignCenter() {
-  const meme = getMeme()
-  render(meme, 'center')
+  render(meme, dir)
 }
 
 function handleTipsSize() {
+  const keyWords = getKeyWords()
   const options = document.querySelectorAll('.tips option')
-  options.forEach(
-    option =>
-      (option.style.fontSize = gKeywordSearchCountMap[option.value] + 'px')
-  )
-}
-
-function onAlignRight() {
-  const meme = getMeme()
-  render(meme, 'right')
+  options.forEach(option => {
+    if (keyWords[option.value] >= 26) return
+    option.style.fontSize = keyWords[option.value] + 'px'
+  })
 }
 
 function render(meme, dir) {
@@ -212,4 +199,8 @@ function onSetFilter(val) {
   handleTipsSize()
   gFilterBy.txt = val
   renderGallery()
+}
+
+function onHideFocus() {
+  document.querySelector('.focus').style.display = 'none'
 }

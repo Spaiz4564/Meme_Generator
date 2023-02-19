@@ -5,8 +5,8 @@
   }
 
   .gallery-img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
   }
 
   .tips option {
@@ -29,8 +29,12 @@
   }
 
   .gallery-img {
-    height: 280px;
-    width: 280px;
+    height: 250px;
+    width: 250px;
+  }
+
+  .search {
+    gap: 23px;
   }
 }
 
@@ -75,16 +79,14 @@
   }
 
   .gallery-img {
-    height: 200px;
-    width: 200px;
+    height: 170px;
+    width: 170px;
   }
 
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  }
-
+  .gallery,
   .saved-memes {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
   }
 
   canvas {
@@ -165,7 +167,8 @@
 
   .gallery,
   .saved-memes {
-    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    padding: 50px 0px;
   }
 
   .hamburger img {
