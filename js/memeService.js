@@ -105,6 +105,10 @@ function getSavedMemes() {
   return gSavedMemes
 }
 
+function getSavedMemesURLS() {
+  return gSavedMemesURLS
+}
+
 function getFilterBy() {
   return gFilterBy
 }

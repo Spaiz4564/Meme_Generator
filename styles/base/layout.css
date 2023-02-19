@@ -24,6 +24,14 @@
   padding-left: 7rem;
 }
 
+.saved-memes p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-weight: 700;
+  font-size: 25px;
+}
 .tools {
   border: 1px solid #c3257a;
   border-radius: 17px;

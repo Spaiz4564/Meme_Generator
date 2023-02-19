@@ -4,16 +4,25 @@ let gElCanvas
 let gCtx
 let gImgFrame
 const STORAGE_KEY = 'savedMemes'
-let gSavedMemes = loadFromStorage(STORAGE_KEY)
+const STORAGE_KEY_DEFAULT = 'savedMemesDefault'
+let gSavedMemesURLS = loadFromStorage(STORAGE_KEY)
+let gSavedMemes = loadFromStorage(STORAGE_KEY_DEFAULT)
 
 function onInit() {
   gElCanvas = document.querySelector('#my-canvas')
   gCtx = gElCanvas.getContext('2d')
+  if (!gSavedMemesURLS) {
+    gSavedMemesURLS = []
+  } else {
+    gSavedMemesURLS = loadFromStorage(STORAGE_KEY)
+  }
+
   if (!gSavedMemes) {
     gSavedMemes = []
   } else {
-    gSavedMemes = loadFromStorage(STORAGE_KEY)
+    gSavedMemes = loadFromStorage(STORAGE_KEY_DEFAULT)
   }
+
   renderGallery()
   handleTipsSize()
 }
@@ -181,25 +190,28 @@ function onRenderSavedMemes() {
   hideEditor()
   document.querySelector('.filler').classList.add('hidden')
   document.querySelector('.gallery-container').classList.add('hidden')
-  const savedMemes = loadFromStorage(STORAGE_KEY)
-  if (!savedMemes) {
+  const savedMemesURLS = loadFromStorage(STORAGE_KEY)
+  const savedMemesDefault = loadFromStorage(STORAGE_KEY_DEFAULT)
+  if (!savedMemesURLS) {
     savedMemesEl.innerHTML = `<p class="empty">No Saved Memes<p>`
   } else {
-    var str = savedMemes.map(
-      meme =>
-        `<img onclick="onImgSelect(${meme.imgId}, '${
-          meme.memeId
-        }')" class="gallery-img" src="${gImgs[meme.imgId].url}" alt="">`
+    var str = savedMemesURLS.map(
+      (meme, i) =>
+        `<img onclick="onImgSelect(${savedMemesDefault[i].imgId}, '${savedMemesDefault[i].memeId}')" class="gallery-img" src="${meme}" alt="">`
     )
     savedMemesEl.innerHTML = str.join('')
   }
 }
 
 function onSaveMeme() {
-  const savedMemes = getSavedMemes()
+  const savedMemesUrls = getSavedMemesURLS()
+  const savedMemesDefault = getSavedMemes()
   const newMeme = { ...gMeme }
-  savedMemes.push(newMeme)
-  saveToStorage(STORAGE_KEY, gSavedMemes)
+  const meme = gElCanvas.toDataURL()
+  savedMemesDefault.push(newMeme)
+  savedMemesUrls.push(meme)
+  saveToStorage(STORAGE_KEY, gSavedMemesURLS)
+  saveToStorage(STORAGE_KEY_DEFAULT, gSavedMemes)
   handlePopUp('Meme saved')
 }
 

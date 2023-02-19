@@ -39,6 +39,7 @@ function onImgSelect(imgId, memeId) {
     renderMeme(defaultMeme)
   } else {
     renderMeme(savedMeme)
+    gMeme = gSavedMemes[memeIndex]
   }
   document.querySelector('.saved-memes-container').classList.add('hidden')
   showEditor()
