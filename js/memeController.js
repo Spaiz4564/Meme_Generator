@@ -77,18 +77,15 @@ function onChangeFont(val) {
 }
 
 function onAddText() {
-  if (!gMeme.isSecondLineAdded) {
+  const meme = getMeme()
+  if (!meme.isSecondLineAdded) {
     addText(500)
     gCtx.fillText('i love dank memes', gElCanvas.width / 2, 500)
   } else {
     addText(gElCanvas.height / 2)
-    gCtx.fillText(
-      gMeme.lines[1].txt,
-      gMeme.lines[1].width,
-      gElCanvas.height / 2
-    )
+    gCtx.fillText(meme.lines[1].txt, meme.lines[1].width, gElCanvas.height / 2)
   }
-  gMeme.isSecondLineAdded = true
+  meme.isSecondLineAdded = true
 }
 
 function changeColor(color) {
@@ -162,8 +159,9 @@ function onRenderSavedMemes() {
 }
 
 function onSaveMeme() {
+  const savedMemes = getSavedMemes()
   const newMeme = { ...gMeme }
-  gSavedMemes.push(newMeme)
+  savedMemes.push(newMeme)
   saveToStorage(STORAGE_KEY, gSavedMemes)
   handlePopUp('Meme saved')
 }
@@ -179,8 +177,9 @@ function handlePopUp(txt) {
 }
 
 function onSetFilter(val) {
+  const filter = getFilterBy()
   if (!val) {
-    gFilterBy.txt = ''
+    filter.txt = ''
     renderGallery()
     return
   }
@@ -197,7 +196,7 @@ function onSetFilter(val) {
 
   gKeywordSearchCountMap[val] += 3
   handleTipsSize()
-  gFilterBy.txt = val
+  filter.txt = val
   renderGallery()
 }
 

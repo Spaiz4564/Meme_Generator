@@ -8,7 +8,6 @@ var gKeywordSearchCountMap = {
   movies: 14,
   smile: 11,
 }
-var gSavedMemeCounter = 0
 var gImgs = [
   { id: 0, url: 'images/gallery-imgs/1.jpg', keywords: ['funny', 'men'] },
   { id: 1, url: 'images/gallery-imgs/2.jpg', keywords: ['funny', 'pet'] },
@@ -99,6 +98,14 @@ function getMeme() {
 
 function getKeyWords() {
   return gKeywordSearchCountMap
+}
+
+function getSavedMemes() {
+  return gSavedMemes
+}
+
+function getFilterBy() {
+  return gFilterBy
 }
 
 function getGallery() {
