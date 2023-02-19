@@ -15,6 +15,7 @@ function onInit() {
     gSavedMemes = loadFromStorage(STORAGE_KEY)
   }
   renderGallery()
+  handleTipsSize()
 }
 
 function onHideFocus() {
@@ -29,6 +30,14 @@ function onAlignLeft() {
 function onAlignCenter() {
   const meme = getMeme()
   render(meme, 'center')
+}
+
+function handleTipsSize() {
+  const options = document.querySelectorAll('.tips option')
+  options.forEach(
+    option =>
+      (option.style.fontSize = gKeywordSearchCountMap[option.value] + 'px')
+  )
 }
 
 function onAlignRight() {
@@ -183,7 +192,24 @@ function handlePopUp(txt) {
 }
 
 function onSetFilter(val) {
-  console.log(val)
+  if (!val) {
+    gFilterBy.txt = ''
+    renderGallery()
+    return
+  }
+  if (document.querySelector([`.tips [value=${val}]`])) {
+    document.querySelector([`.tips [value=${val}]`]).style.animation = 'bounce'
+    document.querySelector([`.tips [value=${val}]`]).style.animationDuration =
+      '2s'
+    setTimeout(() => {
+      document.querySelector([`.tips [value=${val}]`]).style.animation = ''
+      document.querySelector([`.tips [value=${val}]`]).style.animationDuration =
+        ''
+    }, 2000)
+  }
+
+  gKeywordSearchCountMap[val] += 3
+  handleTipsSize()
   gFilterBy.txt = val
   renderGallery()
 }

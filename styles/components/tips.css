@@ -11,6 +11,7 @@
 }
 
 .tips option {
+  animation-duration: 2s; /* don't forget to set a duration! */
   font-family: cursive;
   font-size: 1.3rem;
   cursor: pointer;

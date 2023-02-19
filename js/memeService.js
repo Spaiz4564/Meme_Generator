@@ -1,6 +1,13 @@
 'use strict'
 
-var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 }
+var gKeywordSearchCountMap = {
+  funny: 12,
+  pet: 15,
+  baby: 10,
+  men: 14,
+  movies: 13,
+  smile: 10,
+}
 var gSavedMemeCounter = 0
 var gImgs = [
   { id: 0, url: 'images/gallery-imgs/1.jpg', keywords: ['funny', 'men'] },
