@@ -51,7 +51,6 @@ function render(meme) {
 
   gImgFrame.addEventListener('load', function () {
     meme.lines.forEach((line, i) => {
-      document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
       gCtx.textBaseline = 'top'
       gCtx.textAlign = meme.lines[i].alignDir
 
@@ -63,8 +62,12 @@ function render(meme) {
         meme.lines[i].height,
         gElCanvas.width
       )
+      document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
     })
   })
+  if (!gMeme.isSecondLineAdded) {
+    onSwitchLine()
+  }
 }
 
 function renderMeme(meme) {
@@ -96,9 +99,29 @@ function onAddText() {
     gCtx.fillText(meme.lines[1].txt, meme.lines[1].width, gElCanvas.height / 2)
   }
   meme.isSecondLineAdded = true
-  gMeme.lineIdx++
   document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
   onSwitchLine()
+}
+
+function onMoveTxt(dir) {
+  const meme = getMeme()
+  const memeCurrLine = meme.lines[meme.lineIdx]
+  if (dir === 'down') {
+    if (memeCurrLine.height >= 530) return
+    memeCurrLine.height += 10
+  } else if (dir === 'up') {
+    if (memeCurrLine.height <= 10) return
+    memeCurrLine.height -= 10
+  } else if (dir === 'left') {
+    if (memeCurrLine.width <= 125) return
+    memeCurrLine.width -= 10
+  } else {
+    if (memeCurrLine.width >= 425) return
+    memeCurrLine.width += 10
+  }
+  document.querySelector('.focus').style.height = memeCurrLine.size + 'px'
+  document.querySelector('.focus').style.top = memeCurrLine.height + 'px'
+  render(meme)
 }
 
 function changeColor(color) {

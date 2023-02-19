@@ -35,3 +35,39 @@
 .color-container {
   position: relative;
 }
+
+.arrows {
+  transition: all 0.3s;
+  width: 36px;
+  height: 42px;
+  display: grid;
+  align-items: center;
+  position: relative;
+}
+
+.arrows i {
+  position: absolute;
+  font-size: 15px !important;
+}
+
+.arrows i:nth-child(3) {
+  justify-self: end;
+  rotate: -90deg;
+}
+.arrows i:nth-child(2) {
+  justify-self: center;
+  align-self: start;
+  rotate: -90deg;
+}
+
+.arrows i:nth-child(1) {
+  justify-self: start;
+  align-self: center;
+  rotate: -90deg;
+}
+
+.arrows i:nth-child(4) {
+  justify-self: center;
+  align-self: end;
+  rotate: -90deg;
+}
