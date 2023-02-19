@@ -3,6 +3,7 @@
 }
 
 .icons {
+  opacity: 0.9;
   cursor: pointer;
   height: 50px;
   width: 55px;
