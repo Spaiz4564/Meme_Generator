@@ -17,6 +17,7 @@
 }
 
 .tools {
+  border: 1px solid #c3257a;
   border-radius: 17px;
   gap: 30px;
   padding: 25px;
