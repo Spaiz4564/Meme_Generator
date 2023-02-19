@@ -79,6 +79,12 @@ function render(meme) {
   }
 }
 
+function onActivateTroll() {
+  document.querySelector(
+    '.nav a'
+  ).innerHTML = `<i class='fa-solid fa-face-smile-wink'></i>`
+}
+
 function renderMeme(meme) {
   render(meme)
 }
