@@ -2,14 +2,6 @@
   padding-left: 30px;
 }
 
-.search {
-  display: flex;
-  gap: 70px;
-  align-items: center;
-  padding-top: 30px;
-  padding-left: 6rem;
-}
-
 .search i {
   transition: all 0.3s;
   font-size: 30px;
@@ -22,15 +14,15 @@
 .search-input {
   padding: 10px;
   border-radius: 100px;
-  width: 45%;
+  width: 50%;
   font-size: 25px;
 }
 
 .txt-input {
   border: 1px solid #c3257a;
-  border-radius: 100px;
-  width: 400px;
-  font-size: 24px;
+  border-radius: 10px;
+  width: 390px;
+  font-size: 20px;
   height: 51px;
   text-align: center;
 }

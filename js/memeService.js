@@ -64,10 +64,11 @@ var gMeme = {
   lineFocus: false,
   lines: [
     {
+      alignDir: 'center',
       isUpperCased: false,
       txt: 'It is wednesday  my dudes',
       height: 20,
-      width: 50 + '%',
+      width: 20,
       size: 22,
       font: 'impact',
       color: 'white',
@@ -119,6 +120,9 @@ function getGallery() {
 
 function setLineTxt() {
   var txtVal = document.querySelector('.txt-input').value
+  if (!txtVal) {
+    document.querySelector('.txt-input').placeholder = 'Type something'
+  }
   if (!gMeme.lines[gMeme.lineIdx]) return
   gMeme.lines[gMeme.lineIdx].txt = txtVal
   renderMeme(gMeme)
@@ -133,6 +137,7 @@ function resetMeme() {
     lineFocus: false,
     lines: [
       {
+        alignDir: 'center',
         isUpperCased: false,
         txt: 'It is wednesday  my dudes',
         height: 20,

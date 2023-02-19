@@ -16,11 +16,19 @@
   width: 200px;
 }
 
+.search {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 7rem;
+}
+
 .tools {
   border: 1px solid #c3257a;
   border-radius: 17px;
-  gap: 30px;
-  padding: 25px;
+  gap: 35px;
+  padding: 25px 25px 0px 25px;
   height: 550px;
   width: 550px;
   display: flex;

@@ -20,7 +20,15 @@ function onInit() {
 
 function onAlign(dir) {
   const meme = getMeme()
-  render(meme, dir)
+  if (dir === 'right') {
+    meme.lines[meme.lineIdx].width = 520
+  } else if (dir === 'left') {
+    meme.lines[meme.lineIdx].width = 20
+  } else {
+    meme.lines[meme.lineIdx].width = gElCanvas.width / 2
+  }
+  meme.lines[meme.lineIdx].alignDir = dir
+  render(meme)
 }
 
 function handleTipsSize() {
@@ -32,7 +40,7 @@ function handleTipsSize() {
   })
 }
 
-function render(meme, dir) {
+function render(meme) {
   gCtx.strokeStyle = 'black'
   gCtx.save()
   gImgFrame = new Image()
@@ -43,7 +51,10 @@ function render(meme, dir) {
 
   gImgFrame.addEventListener('load', function () {
     meme.lines.forEach((line, i) => {
+      document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
       gCtx.textBaseline = 'top'
+      gCtx.textAlign = meme.lines[i].alignDir
+
       gCtx.font = `${line.size}px ${line.font}`
       gCtx.fillStyle = line.color
       gCtx.fillText(
@@ -54,7 +65,6 @@ function render(meme, dir) {
       )
     })
   })
-  gCtx.textAlign = dir
 }
 
 function renderMeme(meme) {
@@ -86,6 +96,9 @@ function onAddText() {
     gCtx.fillText(meme.lines[1].txt, meme.lines[1].width, gElCanvas.height / 2)
   }
   meme.isSecondLineAdded = true
+  gMeme.lineIdx++
+  document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
+  onSwitchLine()
 }
 
 function changeColor(color) {
@@ -127,6 +140,7 @@ function onSwitchLine() {
   document.querySelector('.focus').style.top =
     meme.lines[meme.lineIdx].height + 'px'
   meme.lineFocus = true
+  document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
 }
 
 function onDeleteTxt() {

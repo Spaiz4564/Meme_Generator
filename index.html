@@ -79,7 +79,7 @@
         
         <div class="tools">
           <input oninput="setLineTxt()" class="txt-input" type="text" name="txt" id="txt"
-          placeholder="type something.."</input>
+          placeholder=""</input>
           <div class="features-1">
             <i onclick="onSwitchLine()" class="fa-solid fa-arrow-right-arrow-left arrows"></i>
             <i onclick="onAddText()" class="fa-solid fa-plus"></i>
@@ -112,12 +112,12 @@
            </ul>
           </div>
           <div class="btn_wrap">
-            <span>Share</span>
+            <span>Actions</span>
             <div class="container">
-                <i  onclick="onUploadImg()" class="fab fa-facebook-f"></i>
-                <i class="fa-solid fa-download"><a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">h</a></i>
-                <i onclick="onSaveMeme()" class="fa-regular fa-bookmark"></i> 
-                <i class="fab fa-github"></i>
+                <i title="Share on facebook"  onclick="onUploadImg()" class="fab fa-facebook-f"></i>
+                <i title="Download" class="fa-solid fa-download"><a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">h</a></i>
+                <i title="Save" onclick="onSaveMeme()" class="fa-regular fa-bookmark"></i> 
+                <i title="git" class="fab fa-github"></i>
             </div>
         </div>
     <a href="https://dribbble.com/YancyMin" class="dr-url" target="_blank"><img class="dr" alt=""></a>
