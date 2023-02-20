@@ -71,11 +71,11 @@ function render(meme) {
         meme.lines[i].height,
         gElCanvas.width
       )
-      document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
     })
   })
   if (!gMeme.isSecondLineAdded) {
     onSwitchLine()
+    document.querySelector('.txt-input').value = meme.lines[meme.lineIdx].txt
   }
 }
 
